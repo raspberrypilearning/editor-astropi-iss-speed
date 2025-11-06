@@ -1,4 +1,4 @@
-name: "Project title starter"
-identifier: "project-name-starter"
+name: "AstroPi ISS Speed"
+identifier: "editor-astropi-iss-speed"
 type: 'python'
-build: false
+build: true
