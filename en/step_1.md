@@ -1,45 +1,38 @@
-## What you will make
-OR
-## What you will do - change meta if you use this
+## Introduction
 
-A brief description - one or two sentences. 
+In this project, you will use photos taken by an Astro Pi Flight Unit on the International Space Station (ISS) to estimate the speed at which the ISS orbits the Earth.
 
---- print-only ---
+![Timelapse sequence of photos taken from the ISS, showing the view as it passed over a coastline.](images/Atlas.gif)
 
-![ALT TEXT](images/IMAGE.png)
+<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
+<span style="color: #0faeb0">**The European Astro Pi Challenge**</span> offers young people the amazing opportunity to conduct scientific investigations in space by writing computer programs that run on Raspberry Pi computers aboard the ISS.    
+</p>
 
---- /print-only ---
+You will:
 
---- no-print ---
++ Extract EXIF data from images
++ Use OpenCV to calculate distances between similar features in two images
++ Calculate the speed of the ISS
 
-[Editor embed](https://editor.raspberrypi.org/en/embed/viewer/project-slug)
+--- task ---
+  
+The image below shows two photos taken from the ISS, with lines that connect similar features. By measuring the pixel distance between the features that have moved, you can calculate the speed that the camera was moving, and so work out how fast the ISS is travelling.
 
---- /no-print ---
+![Two images, side by side, taken from the ISS with lines mapping the similar features between the images.](images/features_view.png)
 
---- no-print ---
+--- /task ---
 
-Video embed
+To complete this project, you will need:
 
-<video width="640" height="360" controls>
-<source src="images/videoname.mp4" type="video/mp4">
-</video>
+**Hardware**
 
-Youtube embed 
-<html>
-<div style="position: relative; overflow: hidden; padding-top: 56.25%;">
-<iframe style="position: absolute; top: 0; left: 0; right: 0; width: 100%; height: 100%; border: none;" src="https://www.youtube.com/embed/XXXXXXXXX?rel=0&cc_load_policy=1" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
-</iframe>
-</div><br>
-</html>
++ A computer that can run Python or a web-browser and access to a code editor of your choice.
+ 
 
-Scratch embed
-<div class="scratch-preview">
- <iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/XXXXXXXXX/?autostart=false" frameborder="0"></iframe>
-</div>
+**Software**
 
---- /no-print ---
++ Thonny – this project can be completed using the Thonny Python editor, which can be installed on a Linux, Windows, or Mac computer
 
-### You will need:
-- a
-- b
-- c
+[[[thonny-install]]]
+
+[[[change-theme-thonny]]]

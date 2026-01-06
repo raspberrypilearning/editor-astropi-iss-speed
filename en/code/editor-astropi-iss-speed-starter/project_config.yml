@@ -1,4 +1,4 @@
 name: "AstroPi ISS Speed"
-identifier: "editor-astropi-iss-speed"
+identifier: "editor-astropi-iss-speed-starter"
 type: 'python'
 build: true

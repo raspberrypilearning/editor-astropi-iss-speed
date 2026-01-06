@@ -1,14 +1,25 @@
-title: Project title in sentence case
+---
+title: Calculate the speed of the ISS using photos
 hero_image: images/banner.png
-description: A short description of the project
-listed: false
-pdf: false
+description: Calculate the speed of the ISS using image data
+version: 4
+listed: true
+copyedit: true
+last_tested: '2023-10-19'
 steps:
-  - title: What you will make
-  - title: Step title
-    completion:
-      - engaged      
-  - title: Challenge
-    challenge: true
-    completion:
-      - external
+- title: Introduction
+- title: Use EXIF data to find a time difference
+  completion:
+  - engaged
+- title: Finding the time difference for two photos
+- title: Find matching features
+- title: Display matching features
+- title: Find matching coordinates
+- title: Calculate feature distance
+- title: Calculate average speed
+- title: Improving your program
+- title: What next?
+  completion:
+  - internal
+  completion:
+  - external
