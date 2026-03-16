@@ -3,7 +3,7 @@ title: Calculate the speed of the ISS using photos
 hero_image: images/banner.png
 description: Calculate the speed of the ISS using image data
 version: 4
-listed: true
+listed: false
 copyedit: true
 last_tested: '2023-10-19'
 steps:
