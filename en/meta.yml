@@ -6,20 +6,21 @@ version: 4
 listed: false
 copyedit: true
 last_tested: '2023-10-19'
+landing: true
 steps:
-- title: Introduction
-- title: Use EXIF data to find a time difference
-  completion:
-  - engaged
-- title: Finding the time difference for two photos
-- title: Find matching features
-- title: Display matching features
-- title: Find matching coordinates
-- title: Calculate feature distance
-- title: Calculate average speed
-- title: Improving your program
-- title: What next?
-  completion:
-  - internal
-  completion:
-  - external
+  - title: Introduction
+  - title: Use Exif data to find a time difference
+    completion:
+      - engaged
+  - title: Finding the time difference for two photos
+  - title: Find matching features
+  - title: Display matching features
+  - title: Find matching coordinates
+  - title: Calculate feature distance
+  - title: Calculate average speed
+  - title: Improving your program
+    completion:
+      - internal
+  - title: What next?
+    completion:
+      - external

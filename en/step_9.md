@@ -11,4 +11,3 @@ To refine your code and perhaps calculate a more accurate estimation of the spee
 - Does the height of the identified feature also have an effect?
 - Does the angle of motion (diagonally across the frame) have a impact that needs to be corrected for?
 -- If your matched features are clouds, can you compensate for the fact that they may be moving too?
-

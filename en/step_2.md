@@ -6,15 +6,14 @@ An <span style="color: #0faeb0">**exchangeable image file format (Exif)**</span>
 
 To collect Exif data from a photograph, you need a Python library called `exif`.
 
---- task ---
+### Step 1
 
 Open the Thonny Python IDE, and click on **Tools** > **Manage packages**, then search for and install the `exif` library. 
 
---- /task ---
 
 [[[thonny-install-package]]]
 
---- task ---
+### Step 2
 
 In the main code editor, add the following two lines of code.
 
@@ -30,21 +29,18 @@ from exif import Image
 from datetime import datetime
 --- /code ---
 
---- /task ---
 
---- task ---
+### Step 3
 
 Save your file as `iss_speed.py`.
 
---- /task ---
 
---- task ---
+### Step 4
 
 You will need some images taken from the Astro Pi unit on the ISS. You can download the photos by clicking on [this link](https://rpf.io/examplephoto){:target='_blank'}. Once the photos have been downloaded, you can right-click on the folder in your **Downloads** and unzip the folder. **Then move the photos to the same place that you have saved your python script.**
 
---- /task ---
 
---- task ---
+### Step 5
 
 Beneath your `import` lines, create a function to find the time that a photo was taken. It will take one argument, which will be the photo's file name.
 
@@ -63,9 +59,8 @@ from datetime import datetime
 def get_time(image):
 --- /code ---
 
---- /task ---
 
---- task ---
+### Step 6
 
 The image needs to be opened and then converted to an `Image` object, which is part of the `exif` package.
 
@@ -86,9 +81,8 @@ def get_time(image):
         img = Image(image_file)
 --- /code ---
 
---- /task ---
 
---- task ---
+### Step 7
 
 You can have a look at all the Exif data that is saved in the image file.
 
@@ -111,9 +105,8 @@ def get_time(image):
             print(data)
 --- /code ---
 
---- /task ---
 
---- task ---
+### Step 8
 
 You can test out your function using one of the image names that you have downloaded. This needs to be a string.
 
@@ -139,9 +132,8 @@ def get_time(image):
 get_time('atlas_photo_012.jpg')
 --- /code ---
 
---- /task ---
 
---- task ---
+### Step 9
 
 Run your code, and you should see some output that looks like this:
 
@@ -161,9 +153,8 @@ gps_longitude_ref
 gps_longitude
 ```
 
---- /task ---
 
---- task ---
+### Step 10
 
 The data that is needed for this project is `datetime_original`. This can be saved as a string, and then it needs to be converted to a `datetime` object so that calculations can be performed on it.
 
@@ -195,6 +186,5 @@ When you run this code, you should see output that looks like this:
 ```
 2023-05-08 15:31:57
 ```
---- /task ---
 
 --- save ---

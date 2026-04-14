@@ -6,7 +6,7 @@ You can calculate the speed an object is traveling at by dividing the distance i
 
 So, to calculate the speed of the ISS from photos, you need to know how much time has passed between when the photos were taken.
 
---- task ---
+### Step 1
 
 Remove the call to `print` the results of your `get_time` function.
 
@@ -33,10 +33,9 @@ def get_time(image):
 
 --- /code ---
 
---- /task ---
 
 
---- task ---
+### Step 2
 
 Create a new function called `get_time_difference`. It will take two arguments, which will be the file names of the two images.
 
@@ -51,9 +50,8 @@ line_highlights: 13
 def get_time_difference(image_1, image_2):
 --- /code ---
 
---- /task ---
 
---- task ---
+### Step 3
 
 Use your `get_time` function to get the times from the Exif data from each of the two images.
 
@@ -70,9 +68,8 @@ def get_time_difference(image_1, image_2):
     time_2 = get_time(image_2)
 --- /code ---
 
---- /task ---
 
---- task ---
+### Step 4
 
 Subtract the two times from each other, and test it by printing.
 
@@ -91,9 +88,8 @@ def get_time_difference(image_1, image_2):
     print(time_difference)
 --- /code ---
 
---- /task ---
 
---- task ---
+### Step 5
 
 You can run your function by calling it with two different image names.
 
@@ -116,9 +112,8 @@ get_time_difference('c', 'atlas_photo_013.jpg')
 
 --- /code ---
 
---- /task ---
 
---- task ---
+### Step 6
 
 Run your code, and if you have used the two images shown above, you should see output like this:
 
@@ -126,9 +121,8 @@ Run your code, and if you have used the two images shown above, you should see o
 >>> 0:00:14
 ```
 
---- /task ---
 
---- task ---
+### Step 7
 
 The function needs to return the time in seconds, as an integer. The `datetime` package provides an easy conversion for this.
 
@@ -148,9 +142,8 @@ def get_time_difference(image_1, image_2):
 
 --- /code ---
 
---- /task ---
 
---- task ---
+### Step 8
 
 To test your code, you can `print` the output of the new function.
 
@@ -177,6 +170,5 @@ Your output should look something like this, depending on the photos you have ch
 ```
 >>> 14
 ```
---- /task ---
 
 --- save ---

@@ -2,7 +2,7 @@
 
 With the coordinates of matching features stored, the distance between the coordinates of the matching features can be calculated. This will be the distance on the images though, so it will need to be converted to the equivalent kilometer distance on Earth, and then divided by the time difference between the photos, to calculate the speed.
 
---- task ---
+### Step 1
 
 Create a function to calculate the average distance between matching coordinates. Call it `calculate_mean_distance`. It takes two arguments, which will be the two coordinates lists.
 
@@ -17,11 +17,10 @@ line_highlights: 67
 def calculate_mean_distance(coordinates_1, coordinates_2):
 --- /code ---
 
---- /task ---
 
 The Python `zip` function will take items from two lists and join them together. So the 0th item from the first list and the 0th item from the second list are combined together. Then the 1st items from each of the lists are combined together. The zipped list object can easily be converted back to a single simple list.
 
---- task ---
+### Step 2
 
 Start by creating a variable to store the sum of all the distances between coordinates and call it `all_distances`. Next, you can `zip` the two lists, and then convert the zipped object back to a list.
 
@@ -38,11 +37,10 @@ def calculate_mean_distance(coordinates_1, coordinates_2):
     merged_coordinates = list(zip(coordinates_1, coordinates_2))
 --- /code ---
 
---- /task ---
 
 To see what has happened here, you can add some `print` calls to see the details of the lists.
 
---- task ---
+### Step 3
 
 Add three `print` calls to see an item in `coordinates_1`, `coordinates_2`, and `merged_coordinates`.
 
@@ -62,9 +60,8 @@ def calculate_mean_distance(coordinates_1, coordinates_2):
     print(merged_coordinates[0])
 --- /code ---
 
---- /task ---
 
---- task ---
+### Step 4
 
 Add a call to your function at the bottom of your script.
 
@@ -87,11 +84,10 @@ When you run the code, you should see output that looks like this:
 ((2006.4000244140625, 2119.2001953125), (2722.800048828125, 2156.400146484375))
 ```
 
---- /task ---
 
 Hopefully you can see that the `x` and `y` coordinate from each feature, from each image, have been combined. This will allow for easy iteration over the new list.
 
---- task ---
+### Step 5
 
 Delete the `print` calls and add a `for` loop to iterate over the `merged_coordinates` and calculate the differences between the `x` and `y` coordinates in each image.
 
@@ -111,7 +107,6 @@ def calculate_mean_distance(coordinates_1, coordinates_2):
         y_difference = coordinate[0][1] - coordinate[1][1]
 --- /code ---
 
---- /task ---
 
 Look at the following image:
 
@@ -119,7 +114,7 @@ Look at the following image:
 
 The distance between points **A** and **B** is the length of the line **c**. This is called the hypotenuse. Using the `math` package, the hypotenuse (`hypot`) can be calculated.
 
---- task ---
+### Step 6
 
 Calculate the distance between the two points and add them to the `all_distances` variable.
 
@@ -141,9 +136,8 @@ def calculate_mean_distance(coordinates_1, coordinates_2):
         all_distances = all_distances + distance
 --- /code ---
 
---- /task ---
 
---- task ---
+### Step 7
 
 Return the average distance between the features by dividing `all_distances` by the number of feature matches, which is the length of the `merged_coordinates` list.
 
@@ -166,9 +160,8 @@ def calculate_mean_distance(coordinates_1, coordinates_2):
     return all_distances / len(merged_coordinates)
 --- /code ---
 
---- /task ---
 
---- task ---
+### Step 8
 
 Add a function call at the bottom of your code to calculate the average distance, and then print the result.
 
@@ -190,7 +183,6 @@ average_feature_distance = calculate_mean_distance(coordinates_1, coordinates_2)
 print(average_feature_distance)
 --- /code ---
 
---- /task ---
 
 When you run your code, you should get an answer like `857.1072244913112'.
 
