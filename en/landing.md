@@ -2,5 +2,6 @@
 
 Calculate the speed of the ISS using image data.
 
-**The European Astro Pi Challenge** offers young people the amazing opportunity to conduct scientific investigations in space by writing computer programs that run on Raspberry Pi computers aboard the ISS.
+Use the Python program to compare two Astro Pi photos, inspect the matching features, and estimate how fast the International Space Station was travelling when the images were taken.
 
+<iframe src="https://editor.raspberrypi.org/en/embed/viewer/editor-astropi-iss-speed-complete" width="400" height="710" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>

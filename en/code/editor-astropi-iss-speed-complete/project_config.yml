@@ -1,0 +1,4 @@
+name: "AstroPi ISS Speed Complete"
+identifier: "editor-astropi-iss-speed-complete"
+type: 'python'
+build: true

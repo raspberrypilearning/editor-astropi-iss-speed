@@ -1,7 +1,8 @@
-## Improving your program
-
+<h2 class="c-project-heading--task">Improving your program</h2>
 
 To refine your code and perhaps calculate a more accurate estimation of the speed of the ISS, you could try and investigate any of the following:
+
+<h2 class="c-project-heading--explainer">Follow these instructions</h2>
 
 - Use a different feature detection [algorithm in OpenCV](https://docs.opencv.org/3.4/db/d27/tutorial_py_table_of_contents_feature2d.html){:target='_blank'}
 - Choose a different number of feature matches to use
@@ -11,3 +12,7 @@ To refine your code and perhaps calculate a more accurate estimation of the spee
 - Does the height of the identified feature also have an effect?
 - Does the angle of motion (diagonally across the frame) have a impact that needs to be corrected for?
 -- If your matched features are clouds, can you compensate for the fact that they may be moving too?
+
+## Now run your code
+
+Try one improvement, run your code, and confirm that the change behaves as you expected.

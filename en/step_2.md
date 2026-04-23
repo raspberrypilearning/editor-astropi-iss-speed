@@ -1,22 +1,27 @@
-## Use Exif data to find a time difference
-
-<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-An <span style="color: #0faeb0">**exchangeable image file format (Exif)**</span> is a standard that sets formats for image and sound files, and various tags that can be stored within the file. These tags can include the time the photo was taken, the location it was taken at, and the type of camera that was used.
-</p>
+<h2 class="c-project-heading--task">Use Exif data to find a time difference</h2>
 
 To collect Exif data from a photograph, you need a Python library called `exif`.
 
-### Step 1
+<h2 class="c-project-heading--explainer">Follow these instructions</h2>
 
-Open the Thonny Python IDE, and click on **Tools** > **Manage packages**, then search for and install the `exif` library. 
+### Exif data
+<div class="c-project-callout c-project-callout--tip">
 
+An **exchangeable image file format (Exif)** is a standard that sets formats for image and sound files, and various tags that can be stored within the file. These tags can include the time the photo was taken, the location it was taken at, and the type of camera that was used.
+
+</div>
+
+## Step 1
+
+Open the Thonny Python IDE, and click on **Tools** > **Manage packages**, then search for and install the `exif` library.
 
 [[[thonny-install-package]]]
 
-### Step 2
+## Step 2
 
 In the main code editor, add the following two lines of code.
 
+<div class="c-project-code">
 --- code ---
 ---
 language: python
@@ -28,22 +33,21 @@ line_highlights: 1-2
 from exif import Image
 from datetime import datetime
 --- /code ---
+</div>
 
-
-### Step 3
+## Step 3
 
 Save your file as `iss_speed.py`.
 
-
-### Step 4
+## Step 4
 
 You will need some images taken from the Astro Pi unit on the ISS. You can download the photos by clicking on [this link](https://rpf.io/examplephoto){:target='_blank'}. Once the photos have been downloaded, you can right-click on the folder in your **Downloads** and unzip the folder. **Then move the photos to the same place that you have saved your python script.**
 
-
-### Step 5
+## Step 5
 
 Beneath your `import` lines, create a function to find the time that a photo was taken. It will take one argument, which will be the photo's file name.
 
+<div class="c-project-code">
 --- code ---
 ---
 language: python
@@ -55,15 +59,15 @@ line_highlights: 5
 from exif import Image
 from datetime import datetime
 
-
 def get_time(image):
 --- /code ---
+</div>
 
-
-### Step 6
+## Step 6
 
 The image needs to be opened and then converted to an `Image` object, which is part of the `exif` package.
 
+<div class="c-project-code">
 --- code ---
 ---
 language: python
@@ -75,17 +79,17 @@ line_highlights: 6-7
 from exif import Image
 from datetime import datetime
 
-
 def get_time(image):
     with open(image, 'rb') as image_file:
         img = Image(image_file)
 --- /code ---
+</div>
 
-
-### Step 7
+## Step 7
 
 You can have a look at all the Exif data that is saved in the image file.
 
+<div class="c-project-code">
 --- code ---
 ---
 language: python
@@ -97,19 +101,19 @@ line_highlights: 8-9
 from exif import Image
 from datetime import datetime
 
-
 def get_time(image):
     with open(image, 'rb') as image_file:
         img = Image(image_file)
         for data in img.list_all():
             print(data)
 --- /code ---
+</div>
 
-
-### Step 8
+## Step 8
 
 You can test out your function using one of the image names that you have downloaded. This needs to be a string.
 
+<div class="c-project-code">
 --- code ---
 ---
 language: python
@@ -121,23 +125,22 @@ line_highlights: 12
 from exif import Image
 from datetime import datetime
 
-
 def get_time(image):
     with open(image, 'rb') as image_file:
         img = Image(image_file)
         for data in img.list_all():
             print(data)
 
-
 get_time('atlas_photo_012.jpg')
 --- /code ---
+</div>
 
-
-### Step 9
+## Step 9
 
 Run your code, and you should see some output that looks like this:
 
-```
+<div class="c-project-output">
+<pre>
 make
 model
 software
@@ -151,13 +154,14 @@ gps_latitude_ref
 gps_latitude
 gps_longitude_ref
 gps_longitude
-```
+</pre>
+</div>
 
-
-### Step 10
+## Step 10
 
 The data that is needed for this project is `datetime_original`. This can be saved as a string, and then it needs to be converted to a `datetime` object so that calculations can be performed on it.
 
+<div class="c-project-code">
 --- code ---
 ---
 language: python
@@ -169,7 +173,6 @@ line_highlights: 8-10, 13
 from exif import Image
 from datetime import datetime
 
-
 def get_time(image):
     with open(image, 'rb') as image_file:
         img = Image(image_file)
@@ -177,14 +180,20 @@ def get_time(image):
         time = datetime.strptime(time_str, '%Y:%m:%d %H:%M:%S')
         return time
 
-
 print(get_time('atlas_photo_012.jpg'))
 --- /code ---
+</div>
 
 When you run this code, you should see output that looks like this:
 
-```
+<div class="c-project-output">
+<pre>
 2023-05-08 15:31:57
-```
+</pre>
+</div>
 
 --- save ---
+
+## Now run your code
+
+Run your code and confirm that you can print the `datetime_original` value from one of the ISS photos.
